@@ -7,7 +7,6 @@ dictionary1 = dict(map(lambda i: (i['phone'], i['name']), data))
 dictionary2 = dict(map(lambda i: (i['name'], i['price']), [item for sublist in [i['items'] for i in data] for item in sublist]))
 
 
-print(dictionary1)
 print(dictionary2)
 
 with open('customers.json', 'w') as f:
