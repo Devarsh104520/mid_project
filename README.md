@@ -28,24 +28,24 @@ To use the script:
 ## Input File Format
 Your input JSON file should follow this format:
 
-```python 
-  [
-  {
-    "phone": "1234567890",
-    "name": "John Doe",
-    "items": [
-      {
-        "name": "Item 1",
-        "price": 9.99
-      },
-      {
-        "name": "Item 2",
-        "price": 15.99
-      }
-    ]
-  },
-  // Additional orders...
-]
+     ```python 
+     [
+     {
+       "phone": "1234567890",
+       "name": "John Doe",
+       "items": [
+         {
+           "name": "Item 1",
+           "price": 9.99
+         },
+         {
+           "name": "Item 2",
+           "price": 15.99
+         }
+       ]
+     },
+     // Additional orders...
+     ]
 
 ## Output Files
 
