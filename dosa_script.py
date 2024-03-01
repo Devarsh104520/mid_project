@@ -1,16 +1,41 @@
 import json
 
-with open(r'C:\Users\kunal\OneDrive\Desktop\mid_project\example_orders.json', 'r') as f:
-    data = json.load(f)
+def process_orders(input_file):
+    # Initialize dictionaries for customers and items
+    customers = {}
+    items = {}
 
-dictionary1 = dict(map(lambda i: (i['phone'], i['name']), data))
-dictionary2 = dict(map(lambda i: (i['name'], i['price']), [item for sublist in [i['items'] for i in data] for item in sublist]))
+    # Read orders from the input file
+    with open(input_file, 'r') as file:
+        orders_data = json.load(file)
 
+    # Process each order
+    for order in orders_data:
+        # Extract and update customer information
+        phone = order['phone']
+        name = order['name']
+        customers[phone] = name
+        
+        # Extract and update item information
+        for item in order['items']:
+            item_name = item['name']
+            item_price = item['price']
+            
+            if item_name not in items:
+                items[item_name] = {'price': item_price, 'orders': 1}
+            else:
+                items[item_name]['orders'] += 1
 
-print(dictionary2)
+    # Write the processed data to new JSON files
+    with open('customers.json', 'w') as file:
+        json.dump(customers, file, indent=4)
+    
+    with open('items.json', 'w') as file:
+        json.dump(items, file, indent=4)
 
-with open('customers.json', 'w') as f:
-    json.dump(dictionary1, f, indent=4)
+# Assuming 'example_orders.json' is the input file
+input_file_path = r'C:\Users\kunal\OneDrive\Desktop\mid_project\example_orders.json'
+process_orders(input_file_path)
 
-with open('items.json', 'w') as f:
-    json.dump(dictionary2, f, indent=4)
+print("Processing complete. 'customers.json' and 'items.json' have been created.")
+
