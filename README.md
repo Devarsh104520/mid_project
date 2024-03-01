@@ -28,7 +28,7 @@ To use the script:
 ## Input file format
     
   ```python
- '[
+ [
   {
     "phone": "9292454973",
     "name": "Jeevan",
@@ -43,8 +43,9 @@ To use the script:
        }
      ]
   },
-....
-]'
+  ....
+]
+
 
 ## Output Files
 
