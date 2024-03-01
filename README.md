@@ -37,11 +37,13 @@ The code is designed to process a JSON file containing a list of orders, where e
    2.Item Data Aggregation: For each item in an order, the script checks if the item is already in the items dictionary:
      -If not, it adds the item with its price and initializes the order count to 1.
      -If the item already exists, it increments the order count for that item by 1.
+
 3.Writing Output JSON Files
 
 -Output to customers.json: The script writes the customers dictionary to a file named 'customers.json', formatting it with an indentation of 4 spaces for readability. This file maps customer phone numbers to names.
 
 -Output to items.json: Similarly, the items dictionary is written to a file named 'items.json'. This file includes a record of each item, its price, and how many times it was ordered.
+
 4.Execution and Output
 
 -File Paths: The script defines input_file_path with the path to the input JSON file. This path is hardcoded in the script and points to a specific location on a Windows system. Users of the script would need to modify 
@@ -49,6 +51,7 @@ The code is designed to process a JSON file containing a list of orders, where e
 
 -Function Call and Completion Message: After defining the input_file_path, the script calls process_orders(input_file_path) to process the specified input file. Upon successful execution, it prints a message indicating 
  that processing is complete and that the output files have been created.
+
 5.Design Considerations
 
 -Flexibility: The script is designed to process any JSON file that follows the expected format, making it flexible for various datasets.
