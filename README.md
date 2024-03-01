@@ -25,25 +25,26 @@ To use the script:
 4. Run the script using the following command:
    python dosa_script.py
    After successful execution, check the output directory for customers.json and items.json files.
-## Input file format
-    
- ```python
- [
+## Input File Format
+Your input JSON file should follow this format:
+
+``python 
+  [
   {
-    "phone": "9292454973",
-    "name": "Jeevan",
+    "phone": "1234567890",
+    "name": "John Doe",
     "items": [
-       {
-          "name":"Item 1"
-          "price":9.99
-       },
-       {
-          "name":"Item 2"
-          "price":10.99
-       }
-     ]
+      {
+        "name": "Item 1",
+        "price": 9.99
+      },
+      {
+        "name": "Item 2",
+        "price": 15.99
+      }
+    ]
   },
-  ....
+  // Additional orders...
 ]
 
 ## Output Files
