@@ -27,6 +27,7 @@ To use the script:
    After successful execution, check the output directory for customers.json and items.json files.
 ## Input file format
     
+  ```python
   [
   {
     "phone": "9292454973",
