@@ -28,7 +28,7 @@ To use the script:
 ## Input File Format
 Your input JSON file should follow this format:
 
-``python 
+```python 
   [
   {
     "phone": "1234567890",
