@@ -45,6 +45,7 @@ To use the script:
   },
 ....
 ]
+
 ## Output Files
 
 -customers.json: Contains a mapping of customer phone numbers to their names.
