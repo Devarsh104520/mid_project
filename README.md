@@ -99,6 +99,7 @@ Your input JSON file should follow this format:
 ## Notes
 
 -The script overwrites customers.json and items.json files if they exist in the output directory.
+
 -Ensure the input JSON file is correctly formatted to avoid processing errors.
    
      
