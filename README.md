@@ -94,6 +94,7 @@ Your input JSON file should follow this format:
 ## Output Files
 
 -customers.json: Contains a mapping of customer phone numbers to their names.
+
 -items.json: Contains details of each item, including its price and the number of orders.
 ## Notes
 
